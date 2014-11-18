@@ -63,20 +63,20 @@ $form->addSubmit('submit', 'Send');
 $form->fireEvents();
 
 Assert::same( array(
-   'first' => array(
-	  'name' => 'James Bond',
-	  'email' => 'bond@007.com',
-	  'street' => 'Unknown',
-	  'city' => 'London',
-	  'country' => 'GB',
-   ),
-   'second' => array(
-	  'name' => 'Jim Beam',
-	  'email' => 'jim@beam.com',
-	  'street' => '',
-	  'city' => '',
-	  'country' => 'US',
-   ),
+	'first' => array(
+		'name' => 'James Bond',
+		'email' => 'bond@007.com',
+		'street' => 'Unknown',
+		'city' => 'London',
+		'country' => 'GB',
+	),
+	'second' => array(
+		'name' => 'Jim Beam',
+		'email' => 'jim@beam.com',
+		'street' => '',
+		'city' => '',
+		'country' => 'US',
+	),
 ), $form->getValues(TRUE) );
 
 Assert::matchFile(__DIR__ . '/Forms.example.006.expect', $form->__toString(TRUE) );

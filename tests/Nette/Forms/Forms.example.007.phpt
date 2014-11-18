@@ -94,25 +94,25 @@ $form->setDefaults($defaults);
 $form->fireEvents();
 
 Assert::equal( array(
-   'name' => 'John Doe',
-   'age' => '12',
-   'gender' => NULL,
-   'email' => '',
-   'send' => FALSE,
-   'street' => '',
-   'city' => '',
-   'country' => 'CZ',
-   'password' => 'xxx',
-   'password2' => 'xxx',
-   'avatar' => new Http\FileUpload(array(
-	  'name' => NULL,
-	  'type' => NULL,
-	  'size' => NULL,
-	  'tmp_name' => NULL,
-	  'error' => 4,
-   )),
-   'userid' => '231',
-   'note' => '',
+	'name' => 'John Doe',
+	'age' => '12',
+	'gender' => NULL,
+	'email' => '',
+	'send' => FALSE,
+	'street' => '',
+	'city' => '',
+	'country' => 'CZ',
+	'password' => 'xxx',
+	'password2' => 'xxx',
+	'avatar' => new Http\FileUpload(array(
+		'name' => NULL,
+		'type' => NULL,
+		'size' => NULL,
+		'tmp_name' => NULL,
+		'error' => 4,
+	)),
+	'userid' => '231',
+	'note' => '',
 ), (array) $form->getValues() );
 
 ob_start();
