@@ -133,7 +133,7 @@ var Nette = Nette || {};
 
 	// tests whether element has given class
 	Query.prototype.hasClass = function(className) {
-		return this[0] && this[0].className.replace(/^|\s+|$/g, ' ').indexOf(' '+className+' ') > -1;
+		return this[0] && (typeof this[0].className === 'string') && this[0].className.replace(/^|\s+|$/g, ' ').indexOf(' '+className+' ') > -1;
 	};
 
 	Query.prototype.show = function() {
